@@ -1,4 +1,8 @@
-import React from 'react';
+import {
+  isPluginApplicableToEntity as isPagerDutyAvailable,
+  EntityPagerDutyCard,
+} from '@pagerduty/backstage-plugin';import React from 'react';
+
 import { Button, Grid } from '@material-ui/core';
 import {
   EntityApiDefinitionCard,
@@ -127,9 +131,17 @@ const overviewContent = (
     <Grid item md={6}>
       <EntityAboutCard variant="gridItem" />
     </Grid>
+    <EntitySwitch>
+      <EntitySwitch.Case if={isPagerDutyAvailable}>
+        <Grid item md={6}>
+          <EntityPagerDutyCard />
+        </Grid>
+      </EntitySwitch.Case>
+    </EntitySwitch>
     <Grid item md={6} xs={12}>
       <EntityCatalogGraphCard variant="gridItem" height={400} />
     </Grid>
+    
 
     <Grid item md={4} xs={12}>
       <EntityLinksCard />

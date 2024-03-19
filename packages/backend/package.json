@@ -36,6 +36,8 @@
     "@backstage/plugin-search-backend-module-techdocs": "^0.1.14",
     "@backstage/plugin-search-backend-node": "^1.2.14",
     "@backstage/plugin-techdocs-backend": "^1.9.3",
+    "@pagerduty/backstage-plugin-backend": "^0.4.6",
+    "@pagerduty/backstage-plugin-common": "^0.1.1",
     "app": "link:../app",
     "better-sqlite3": "^9.0.0",
     "dockerode": "^3.3.1",

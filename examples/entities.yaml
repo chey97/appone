@@ -12,6 +12,8 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: example-website
+  annotations:
+    pagerduty.com/integration-key: b35e0de584f04c0fd0212a8ee8498867 #{INTEGRATION-KEY}
 spec:
   type: website
   lifecycle: experimental
